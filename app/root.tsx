@@ -9,12 +9,6 @@ import {
   useCatch,
 } from "remix";
 
-import styles from "./tailwind.css";
-
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
-}
-
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
 export default function App() {
