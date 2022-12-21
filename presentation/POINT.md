@@ -1,5 +1,7 @@
 # Remix
 
+![remix-icon](../public/favicon.ico)
+
 ## Pontos
 
 - Framework Fullstack
@@ -12,6 +14,7 @@
 - Gerenciamento de error via ErrorBoundary
 - Bubble up do erro
 - Nova forma de se trabalhar - **COLOCATION**
+- Prefetch intent
 
 ## Estrutura do código Remix
 
