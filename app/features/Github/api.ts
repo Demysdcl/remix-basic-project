@@ -2,20 +2,12 @@ import pick from 'lodash/pick'
 import invariant from 'tiny-invariant'
 import * as Types from './types'
 
-const config = {
-  headers: {
-    accept: 'application/vnd.github.v3+json',
-    Authorization: `token ${process.env.GITHUB_API_TOKEN}`,
-  },
-}
+const config = {}
 
 export const getUser = async (username?: string) => {
   invariant(username, 'Please provide an username as a string')
 
-  const res = await fetch(
-    `https://api.github.com/users/${username.toLocaleLowerCase()}`,
-    config,
-  )
+  const res = await fetch(`https://api.github.com/users/${username}`, config)
 
   return pick(await res.json(), ['login', 'avatar_url', 'html_url', 'bio'])
 }
